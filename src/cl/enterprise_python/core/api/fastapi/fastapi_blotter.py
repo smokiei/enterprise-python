@@ -112,7 +112,7 @@ def query_trades(leg_ccy: Optional[str] = None):
     return result
 
 
-@app.post("/query_by_notional/{min_notional}")
+@app.post("/query_by_notional")
 def query_trades(min_notional: Optional[float] = None):
     """
     If leg_ccy is specified, return all trades where the currency for
