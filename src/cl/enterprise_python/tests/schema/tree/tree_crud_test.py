@@ -18,10 +18,10 @@ import approvaltests as at
 import mongoengine as me
 from pymongo import MongoClient
 from typing import List, Tuple
-from cl.enterprise_python.core.schema.tree.tree_bond import TreeBond
-from cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
-from cl.enterprise_python.core.schema.tree.tree_swap import TreeSwap
-from cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
+from src.cl.enterprise_python.core.schema.tree.tree_bond import TreeBond
+from src.cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
+from src.cl.enterprise_python.core.schema.tree.tree_swap import TreeSwap
+from src.cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
 
 
 class TreeCrudTest:

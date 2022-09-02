@@ -18,9 +18,9 @@ import approvaltests as at
 import mongoengine as me
 from pymongo import MongoClient
 from typing import List, Tuple
-from cl.enterprise_python.core.schema.frame.frame_bond import FrameBond
-from cl.enterprise_python.core.schema.frame.frame_swap import FrameSwap
-from cl.enterprise_python.core.schema.frame.frame_trade import FrameTrade
+from src.cl.enterprise_python.core.schema.frame.frame_bond import FrameBond
+from src.cl.enterprise_python.core.schema.frame.frame_swap import FrameSwap
+from src.cl.enterprise_python.core.schema.frame.frame_trade import FrameTrade
 
 
 class FrameCrudTest:

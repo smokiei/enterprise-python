@@ -14,7 +14,7 @@
 
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
-from cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
+from src.cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
 
 
 class RelationalLegKey(RelationalBase):

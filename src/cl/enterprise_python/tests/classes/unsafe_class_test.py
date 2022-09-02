@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import pytest
-import cl.enterprise_python.core as ep
+import src.cl.enterprise_python.core as ep
 
 
 class UnsafeClassTest:
@@ -44,7 +44,7 @@ class UnsafeClassTest:
         obj.list_attribute = [2, 3]
         obj_repr = repr(obj)
         assert obj_repr.startswith(
-            "<cl.enterprise_python.core.classes.unsafe_class.UnsafeClass object at"
+            "<src.cl.enterprise_python.core.classes.unsafe_class.UnsafeClass object at"
         )
 
     def test_list_attribute_initialization(self):

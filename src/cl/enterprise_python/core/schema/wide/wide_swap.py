@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import mongoengine as me
-from cl.enterprise_python.core.schema.wide.wide_trade import WideTrade
+from src.cl.enterprise_python.core.schema.wide.wide_trade import WideTrade
 
 
 class WideSwap(WideTrade):

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import mongoengine as me
-from cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
+from src.cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
 
 
 class TreeBond(TreeTrade):

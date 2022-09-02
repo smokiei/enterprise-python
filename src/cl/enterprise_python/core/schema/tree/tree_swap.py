@@ -13,8 +13,8 @@
 # limitations under the License.
 
 import mongoengine as me
-from cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
-from cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
+from src.cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
+from src.cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
 
 
 class TreeSwap(TreeTrade):

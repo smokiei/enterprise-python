@@ -6,7 +6,7 @@ bottle>=0.12.23
 fastapi>=0.79.0
 flake8>=5.0.4
 flask>=2.2.2
-kaleido>=0.0.3
+kaleido==0.2.1
 matplotlib>=3.2.2
 mongoengine>=0.24.2
 numpy>=1.17.4

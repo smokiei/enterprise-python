@@ -19,11 +19,11 @@ import sqlalchemy as sa
 from sqlalchemy.orm import Session
 from typing import List, Any
 import approvaltests as at
-from cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
-from cl.enterprise_python.core.schema.relational.relational_bond import RelationalBond
-from cl.enterprise_python.core.schema.relational.relational_leg import RelationalLeg
-from cl.enterprise_python.core.schema.relational.relational_swap import RelationalSwap
-from cl.enterprise_python.core.schema.relational.relational_trade import RelationalTrade
+from src.cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
+from src.cl.enterprise_python.core.schema.relational.relational_bond import RelationalBond
+from src.cl.enterprise_python.core.schema.relational.relational_leg import RelationalLeg
+from src.cl.enterprise_python.core.schema.relational.relational_swap import RelationalSwap
+from src.cl.enterprise_python.core.schema.relational.relational_trade import RelationalTrade
 
 
 class RelCrudTest:

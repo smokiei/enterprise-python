@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import mongoengine as me
-from cl.enterprise_python.core.schema.frame.frame_trade import FrameTrade
+from src.cl.enterprise_python.core.schema.frame.frame_trade import FrameTrade
 
 
 class FrameSwap(FrameTrade):

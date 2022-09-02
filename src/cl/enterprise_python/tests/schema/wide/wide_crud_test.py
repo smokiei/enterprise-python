@@ -18,9 +18,9 @@ import mongoengine as me
 from pymongo import MongoClient
 import approvaltests as at
 from typing import List, Tuple
-from cl.enterprise_python.core.schema.wide.wide_bond import WideBond
-from cl.enterprise_python.core.schema.wide.wide_swap import WideSwap
-from cl.enterprise_python.core.schema.wide.wide_trade import WideTrade
+from src.cl.enterprise_python.core.schema.wide.wide_bond import WideBond
+from src.cl.enterprise_python.core.schema.wide.wide_swap import WideSwap
+from src.cl.enterprise_python.core.schema.wide.wide_trade import WideTrade
 
 
 class WideCrudTest:

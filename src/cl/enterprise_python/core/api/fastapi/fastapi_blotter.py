@@ -16,9 +16,9 @@ import mongoengine as me
 from typing import List, Dict, Optional
 import uvicorn
 from fastapi import FastAPI, HTTPException
-from cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
-from cl.enterprise_python.core.schema.tree.tree_swap import TreeSwap
-from cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
+from src.cl.enterprise_python.core.schema.tree.tree_leg import TreeLeg
+from src.cl.enterprise_python.core.schema.tree.tree_swap import TreeSwap
+from src.cl.enterprise_python.core.schema.tree.tree_trade import TreeTrade
 
 # Use connection alias specified in 'meta' attribute of the data types for the test
 connection_alias = "tree"

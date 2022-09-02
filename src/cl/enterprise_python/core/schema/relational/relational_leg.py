@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import sqlalchemy as sa
-from cl.enterprise_python.core.schema.relational.relational_leg_key import (
+from src.cl.enterprise_python.core.schema.relational.relational_leg_key import (
     RelationalLegKey,
 )
 

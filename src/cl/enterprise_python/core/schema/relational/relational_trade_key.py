@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import sqlalchemy as sa
-from cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
+from src.cl.enterprise_python.core.schema.relational.relational_base import RelationalBase
 
 
 class RelationalTradeKey(RelationalBase):

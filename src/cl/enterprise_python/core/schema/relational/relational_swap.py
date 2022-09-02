@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from sqlalchemy.orm import relationship
-from cl.enterprise_python.core.schema.relational.relational_trade import RelationalTrade
+from src.cl.enterprise_python.core.schema.relational.relational_trade import RelationalTrade
 
 
 class RelationalSwap(RelationalTrade):

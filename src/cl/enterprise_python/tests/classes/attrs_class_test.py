@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import pytest
-import cl.enterprise_python.core as ep
+import src.cl.enterprise_python.core as ep
 from approvaltests import verify
 
 
