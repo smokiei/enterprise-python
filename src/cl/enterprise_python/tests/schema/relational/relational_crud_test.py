@@ -28,7 +28,7 @@ from src.cl.enterprise_python.core.schema.relational.relational_trade import Rel
 
 class RelCrudTest:
     """
-    Tests for RelSwap using MongoEngine ODM and rel style of embedding.
+    Tests for RelSwap using SQLAlchemy ORM and relational style of embedding.
     """
 
     _db_file_name: str = "rel_crud_test.db"
@@ -83,6 +83,7 @@ class RelCrudTest:
             RelationalSwap(
                 trade_id=f"T{i + 1}",
                 trade_type="Swap",
+                notional=100*(i+1),
                 legs=[fixed_legs[i], floating_legs[i]],
             )
             for i in range(0, 2)
@@ -93,6 +94,7 @@ class RelCrudTest:
             RelationalBond(
                 trade_id=f"T{i + 1}",
                 trade_type="Bond",
+                notional=100 * (i + 1),
                 bond_ccy=ccy_list[i % ccy_count],
             )
             for i in range(2, 3)
@@ -187,6 +189,22 @@ class RelCrudTest:
                         for trade in gbp_fixed_swaps
                     ]
                 )
+
+                # query for trades with notional >= 200
+                notional_more_200 = list(
+                    session.query(RelationalTrade)
+                        .where(RelationalTrade.notional >= 200)
+                        .order_by(RelationalTrade.trade_id)
+                )
+
+                # Add the result to approvaltests file
+                result += "Swaps where notional >= 200:\n" + "".join(
+                    [
+                        f"    trade_id={trade.trade_id} trade_type={trade.trade_type} notional={trade.notional}\n"
+                        for trade in notional_more_200
+                    ]
+                )
+
 
         # Verify result
         at.verify(result)
