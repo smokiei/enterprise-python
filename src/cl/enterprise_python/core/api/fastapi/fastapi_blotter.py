@@ -42,6 +42,7 @@ def create_trades(trade_count: int) -> List[TreeTrade]:
         TreeSwap(
             trade_id=f"T{(i + 1):03}",
             trade_type="Swap",
+            notional=100 * (i + 1),
             legs=[
                 TreeLeg(leg_type="Fixed", leg_ccy=ccy_list[i % ccy_count]),
                 TreeLeg(leg_type="Floating", leg_ccy=ccy_list[(2 * i) % ccy_count]),
@@ -110,6 +111,22 @@ def query_trades(leg_ccy: Optional[str] = None):
     result = {"trades": [trade.to_json() for trade in trades]}
     return result
 
+
+@app.post("/query_by_notional/{min_notional}")
+def query_trades(min_notional: Optional[float] = None):
+    """
+    If leg_ccy is specified, return all trades where the currency for
+    at least one of the legs is leg_ccy, otherwise return all trades.
+    """
+
+    # If leg_ccy is specified, return all trades where the currency for
+    # at least one of the legs is leg_ccy, otherwise return all trades.
+    if min_notional is not None:
+        trades = TreeSwap.objects(notional__gte=min_notional).order_by("trade_id")
+    else:
+        trades = TreeSwap.objects.order_by("trade_id")
+    result = {"trades": [trade.to_json() for trade in trades]}
+    return result
 
 @app.get("/example_raising_exception")
 def example_raising_exception():
